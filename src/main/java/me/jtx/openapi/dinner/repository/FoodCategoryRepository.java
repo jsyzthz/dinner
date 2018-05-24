@@ -3,15 +3,15 @@ package me.jtx.openapi.dinner.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import me.jtx.openapi.dinner.domain.OrderItem;
+import me.jtx.openapi.dinner.domain.Food;
 
 /**
- * Order iteam repository.
+ * Food category repository.
  * 
  * @author huazhong
  * @date 2018/05/17
  */
 @Repository
-public interface OrderItemRepository extends JpaRepository<OrderItem, Long> {
+public interface FoodCategoryRepository extends JpaRepository<Food, Long> {
 
 }

@@ -7,33 +7,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Order
+ * Order controller.
  * 
  * @author huazhong
- *
+ * @date 2018/05/17
  */
 @RequestMapping("/order")
 @RestController
 public class OrderController {
 
-	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public @ResponseBody Object addOrder(@PathVariable("supplierId") String supplierId) {
-		return null;
-	}
-	
-	@RequestMapping(value = "/{order_id}", method = RequestMethod.GET)
-	public @ResponseBody Object getOrder(@PathVariable("order_id") String orderId) {
-		return null;
-	}
-	
-	@RequestMapping(value = "/{order_id}/status", method = RequestMethod.GET)
-	public @ResponseBody Object getOrderStatus(@PathVariable("order_id") String orderId) {
-		return null;
-	}
-	
-	
-	@RequestMapping(value = "/{order_id}/status", method = RequestMethod.PUT)
-	public @ResponseBody Object updateOrderStatus(@PathVariable("order_id") String orderId) {
-		return null;
-	}
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public @ResponseBody Object addOrder(@PathVariable("supplierId") String supplierId) {
+        return null;
+    }
+
+    @RequestMapping(value = "/{order_id}", method = RequestMethod.GET)
+    public @ResponseBody Object getOrder(@PathVariable("order_id") String orderId) {
+        return null;
+    }
+
+    @RequestMapping(value = "/{order_id}/status", method = RequestMethod.GET)
+    public @ResponseBody Object getOrderStatus(@PathVariable("order_id") String orderId) {
+        return null;
+    }
+
+    @RequestMapping(value = "/{order_id}/status", method = RequestMethod.PUT)
+    public @ResponseBody Object updateOrderStatus(@PathVariable("order_id") String orderId) {
+        return null;
+    }
 }
