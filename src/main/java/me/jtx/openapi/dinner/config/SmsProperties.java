@@ -11,6 +11,8 @@ public class SmsProperties {
 
 	private TencentSMS tencent = new TencentSMS();
 
+	private YunPianSMS yunpian=new YunPianSMS();
+	
 	public TencentSMS getTencent() {
 		return tencent;
 	}
@@ -19,7 +21,16 @@ public class SmsProperties {
 		this.tencent = tencent;
 	}
 
-	public static class TencentSMS {
+    public YunPianSMS getYunpian() {
+        return yunpian;
+    }
+
+    public void setYunpian(YunPianSMS yunpian) {
+        this.yunpian = yunpian;
+    }
+
+
+    public static class TencentSMS {
 
 		private int appid;
 
@@ -41,5 +52,18 @@ public class SmsProperties {
 			this.appkey = appkey;
 		}
 	}
+	
+	public static class YunPianSMS {
+
+        private String appkey;
+
+        public String getAppkey() {
+            return appkey;
+        }
+
+        public void setAppkey(String appkey) {
+            this.appkey = appkey;
+        }
+    }
 
 }

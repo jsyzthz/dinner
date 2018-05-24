@@ -105,12 +105,19 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-		
+
 		<!-- Tencent SMS -->
 		<dependency>
 			<groupId>com.github.qcloudsms</groupId>
 			<artifactId>qcloudsms</artifactId>
 			<version>1.0.2</version>
+		</dependency>
+
+		<!-- Yunpian SMS -->
+		<dependency>
+			<groupId>com.yunpian.sdk</groupId>
+			<artifactId>yunpian-java-sdk</artifactId>
+			<version>1.2.7</version>
 		</dependency>
 
 		<!-- Test -->

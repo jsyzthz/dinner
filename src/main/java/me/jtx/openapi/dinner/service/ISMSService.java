@@ -4,6 +4,7 @@
 package me.jtx.openapi.dinner.service;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * @author huazhong
@@ -11,15 +12,17 @@ import java.util.ArrayList;
  */
 public interface ISMSService {
 
-	boolean sentSingleMessage(String countryId, String phoneNumber, String message);
+    static final String COUNTRY_CHINA_ID = "86";
 
-	boolean sentSingleMessageByTemplate(String countryId, String phoneNumber, int templateId, String[] params,
-			String smsSign);
+    boolean sentSingleMessage(String countryId, String phoneNumber, String message);
 
-	boolean sentMulitMessage(String countryId, ArrayList<String> phoneNumbers, String message);
+    boolean sentSingleMessageByTemplate(String countryId, String phoneNumber, int templateId, Map<String,String> params,
+        String smsSign);
 
-	boolean sentMulitMessageByTemplate(String countryId, ArrayList<String> phoneNumbers, int templateId,
-			ArrayList<String> params, String smsSign);
+    boolean sentMulitMessage(String countryId, ArrayList<String> phoneNumbers, String message);
 
-	boolean sentVoiceCode(String countryId, String phoneNumber, String code);
+    boolean sentMulitMessageByTemplate(String countryId, ArrayList<String> phoneNumbers, int templateId,
+        ArrayList<String> params, String smsSign);
+
+    boolean sentVoiceCode(String countryId, String phoneNumber, String code);
 }
