@@ -1,10 +1,13 @@
 package me.jtx.openapi.dinner.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import me.jtx.openapi.dinner.service.ISMSService;
 
 /**
  * Order controller.
@@ -15,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/order")
 @RestController
 public class OrderController {
+	@Autowired
+	private ISMSService smsService;
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public @ResponseBody Object addOrder(@PathVariable("supplierId") String supplierId) {
